@@ -1,0 +1,195 @@
+/* ============================================
+   TABLET-ONLY OPTIMIZATIONS
+   Layout ottimizzato per tablet 768px
+   ============================================ */
+
+/* FORCE TABLET LAYOUT */
+body {
+  max-width: 768px !important;
+  margin: 0 auto !important;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Container tablet */
+.min-h-screen {
+  min-height: 100vh !important;
+  max-width: 768px !important;
+}
+
+/* Grid 2 colonne su tablet */
+.grid {
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1.5rem !important;
+}
+
+/* Cards proporzionali */
+.p-6,
+.p-8 {
+  padding: 1.5rem !important;
+}
+
+.p-4 {
+  padding: 1rem !important;
+}
+
+/* Header tablet */
+header {
+  padding: 1rem 1.5rem !important;
+}
+
+header h1 {
+  font-size: 1.5rem !important;
+}
+
+header p {
+  font-size: 0.875rem !important;
+}
+
+/* Buttons touch-friendly */
+button,
+a {
+  min-height: 48px !important;
+  min-width: 48px !important;
+  touch-action: manipulation;
+}
+
+/* Modal ottimizzati per tablet */
+[role="dialog"] {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 50 !important;
+  padding: 2rem !important;
+}
+
+[role="dialog"] > div {
+  max-width: 90% !important;
+  max-height: 90vh !important;
+  margin: auto !important;
+  border-radius: 1rem !important;
+  overflow-y: auto !important;
+}
+
+/* Font sizes ottimizzati tablet */
+h1 {
+  font-size: 2.25rem !important;
+}
+
+h2 {
+  font-size: 1.875rem !important;
+}
+
+h3 {
+  font-size: 1.5rem !important;
+}
+
+body,
+p {
+  font-size: 1rem !important;
+}
+
+.text-sm {
+  font-size: 0.875rem !important;
+}
+
+.text-xs {
+  font-size: 0.75rem !important;
+}
+
+/* Input fields */
+input,
+textarea,
+select {
+  font-size: 16px !important;
+  padding: 0.875rem !important;
+  width: 100% !important;
+}
+
+/* Spacing ottimizzato */
+.space-y-6 > * + * {
+  margin-top: 1.5rem !important;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem !important;
+}
+
+.gap-6 {
+  gap: 1.5rem !important;
+}
+
+.gap-4 {
+  gap: 1rem !important;
+}
+
+/* Icons proporzionali */
+svg {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
+.w-6,
+.h-6 {
+  width: 1.75rem !important;
+  height: 1.75rem !important;
+}
+
+/* Touch feedback */
+button:active,
+a:active {
+  transform: scale(0.97) !important;
+  opacity: 0.85 !important;
+}
+
+/* Disable hover effects on touch devices */
+@media (hover: none) {
+  *:hover {
+    transform: none !important;
+  }
+}
+
+/* Cards max width */
+.max-w-sm,
+.max-w-md,
+.max-w-lg {
+  max-width: 100% !important;
+}
+
+.max-w-xl,
+.max-w-2xl {
+  max-width: 90% !important;
+}
+
+/* Container padding */
+.container,
+main {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+}
+
+/* Rounded corners */
+.rounded-2xl {
+  border-radius: 1.25rem !important;
+}
+
+.rounded-xl {
+  border-radius: 1rem !important;
+}
+
+.rounded-lg {
+  border-radius: 0.75rem !important;
+}
+
+/* Landscape mode optimization */
+@media (orientation: landscape) and (max-height: 768px) {
+  [role="dialog"] > div {
+    max-height: 85vh !important;
+  }
+
+  header {
+    padding: 0.75rem 1.5rem !important;
+  }
+
+  header h1 {
+    font-size: 1.25rem !important;
+  }
+}
